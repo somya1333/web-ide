@@ -1,0 +1,95 @@
+import React, { Component } from 'react'
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getOutputPython,giveOutput } from '../actions/codeActions';
+import axios from 'axios'
+import AceEditor from 'react-ace';
+import 'brace/mode/python';
+import 'brace/theme/github';
+
+
+const request=require('request')
+
+
+class Code extends Component {
+  constructor() {
+    super();
+    this.state = {
+      code:'',
+      output:''
+    };
+    this.onChange = this.onChange.bind(this);
+    this.onCHange = this.onCHange.bind(this);
+    this.getOutput = this.getOutput.bind(this);
+  }
+
+  onCHange(newValue) {
+    console.log('change',newValue);
+    this.setState({
+      code : newValue
+    })
+  }
+
+  onChange(e) {
+    this.setState({ [e.target.name]: e.target.value });
+  }
+
+  getOutput(){
+    const CodeData={
+      script:this.state.code
+    }
+    axios
+    .post('/users/p',CodeData)
+    .then(res=>{
+      this.state.output=res.data.result
+      console.log(res.data.result)
+      this.props.giveOutput(res.data.result)
+  }
+    )
+    .catch(err=>
+      console.log(err)
+     );
+  }
+ 
+  render() {
+ 
+    return (
+      <div className="ml-3 mt-5">  
+      <div className="row">
+        <div className="col-6">
+        <div>
+          <AceEditor
+    mode="python"
+    onChange={this.onCHange}
+    name="code"
+    value={this.state.code}
+    editorProps={{$blockScrolling: true}}
+     placeholder="Write Python code."
+  />
+
+      </div>
+            {/* <textarea
+                id="code" name="code"
+                style={{backgroundColor:"black",color:"white",width:"700px",height:"450px"}}
+                value={this.state.code}
+                onChange={this.onChange}
+                placeholder="Write Python code."></textarea><br/><br/> */}
+            <button onClick={this.getOutput} type="submit" class="btn "style={{borderRadius:"50px"}} >Run</button>   
+        </div>
+        <div className="col-6">
+        <textarea
+                id="output" name="output"
+                style={{backgroundColor:"black",color:"white",width:"700px",height:"450px"}}
+                value={this.state.output}
+                onChange={this.onChange}
+                placeholder={this.props.code.output}></textarea><br/><br/>
+            </div>
+            </div>
+      </div>
+    )
+  }
+}
+const mapStateToProps=state=>({
+  code:state.code
+})
+export default connect(mapStateToProps,{getOutputPython,giveOutput})(Code);

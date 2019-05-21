@@ -22,10 +22,9 @@ app.use('/users',users);
 
 
 
-app.get('/', function(req,res){
-   res.render('a');
-});
-
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'name', 'build', 'index.html'));
+  });
 
 port=process.env.PORT || 8080;
 app.listen(port,function(){

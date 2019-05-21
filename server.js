@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use('/users',users);
 
 
-
+app.use(express.static('name/build'));
 app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'name', 'build', 'index.html'));
   });

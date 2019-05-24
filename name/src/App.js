@@ -9,6 +9,9 @@ import  store  from './store';
 import Code from './components/Code'
 import Navbar from './components/Navbar'
 import Php from './components/Php'
+import All from './components/animate/All';
+import All2 from './components/animate/All2'
+
 
 
 function App() {
@@ -21,6 +24,8 @@ function App() {
       <Route exact path="/" component={Code} />
       <Route exact path="/php" component={Php} />
       <Route exact path="/python" component={Code} />
+      <Route exact path="/a" component={All}/>
+      <Route exact path="/b" component={All2}/>
       
       </header>
     </div>

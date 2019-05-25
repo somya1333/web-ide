@@ -28,7 +28,7 @@ export default class All2 extends Component {
       >
         <Slider>
           <Slide index={1}  style={{height:"500px"}}>
-          <div className="card"  style={{height:"500px"}} >
+          <div className="card shadow"  style={{height:"500px"}} >
           <img className="card-img-top"  style={{height:"300px"}} src="https://iosd.tech/img/svg/student.svg" alt="Card image cap"/>
           <div className="card-body"  style={{height:"200px"}}>
           <h5 className="card-title">Details</h5>
@@ -38,7 +38,7 @@ export default class All2 extends Component {
             </div>
           </Slide>
           <Slide index={0}>
-          <div className="card"  style={{height:"500px"}} >
+          <div className="card shadow"  style={{height:"500px"}} >
           <img className="card-img-top"  style={{height:"300px"}} src="https://iosd.tech/img/svg/student.svg" alt="Card image cap"/>
           <div className="card-body"  style={{height:"200px"}}>
           <h5 className="card-title">Details</h5>
@@ -48,7 +48,7 @@ export default class All2 extends Component {
             </div>
           </Slide>
           <Slide index={2}>
-          <div className="card"  style={{height:"500px"}} >
+          <div className="card shadow"  style={{height:"500px"}} >
           <img className="card-img-top"  style={{height:"300px"}} src="https://iosd.tech/img/svg/student.svg" alt="Card image cap"/>
           <div className="card-body"  style={{height:"200px"}}>
           <h5 className="card-title">Details</h5>

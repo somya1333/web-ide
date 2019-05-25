@@ -5,7 +5,7 @@ import './x.css'
 
 const SmallSquare = ({ onClick, ...rest}) => (
   <div className="square2" onClick={onClick} {...rest} >
-    <div className="card" >
+    <div className="card shadow" >
   <img className="card-img-top" src="http://dtutimes.dtu.ac.in/img/society/iosd/1.png" alt="Card image cap"/>
   <div className="card-body">
     <h5 className="card-title">Card title2</h5>
@@ -18,7 +18,7 @@ const SmallSquare = ({ onClick, ...rest}) => (
 
 const BigSquare = ({ onClick, ...rest }) => (
   <div className="full-screen-square2" onClick={onClick} {...rest}>
-     <div className="card">
+     <div className="card shadow">
      <img className="card-img-top" src="https://iosd.tech/img/svg/student.svg" alt="Card image cap"/>
      <div className="card-body">
     <h5 className="card-title">Details</h5>

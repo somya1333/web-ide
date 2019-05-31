@@ -7,6 +7,7 @@ import AceEditor from 'react-ace';
 import 'brace/mode/python';
 import 'brace/theme/github';
 
+import windowSize from 'react-window-size';
 
 const request=require('request')
 
@@ -23,11 +24,15 @@ class Code extends Component {
     this.getOutput = this.getOutput.bind(this);
   }
 
+  componentDidMount(){
+    //this.refs.reactAceComponent.editor.resize('700px')
+  }
   onCHange(newValue) {
     console.log('change',newValue);
     this.setState({
       code : newValue
     })
+    // this.refs.reactAceComponent.editor.resize()
   }
 
   onChange(e) {
@@ -54,12 +59,15 @@ class Code extends Component {
   render() {
  
     return (
-      <div className="ml-3 mt-5">  
+      <div className="ml-3  mr-5">  
       <div className="row">
-        <div className="col-6">
+        <div className="">
         <div>
           <AceEditor
     mode="python"
+    height={window.innerHeight-window.innerHeight/3}
+    width={window.innerWidth-50}
+    ref="reactAceComponent"
     onChange={this.onCHange}
     name="code"
     value={this.state.code}
@@ -76,10 +84,11 @@ class Code extends Component {
                 placeholder="Write Python code."></textarea><br/><br/> */}
             <button onClick={this.getOutput} type="submit" class="btn "style={{borderRadius:"50px"}} >Run</button>   
         </div>
-        <div className="col-6">
+        <div className="">
         <textarea
+        className="fixed-bottom"
                 id="output" name="output"
-                style={{backgroundColor:"black",color:"white",width:"700px",height:"450px"}}
+                style={{backgroundColor:"black",color:"white",height:"100px",width:"1500px"}}
                 value={this.state.output}
                 onChange={this.onChange}
                 placeholder={this.props.code.output}></textarea><br/><br/>

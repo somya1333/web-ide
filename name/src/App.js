@@ -18,8 +18,8 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-    <div className="App">
-      <header className="App-header">
+    <div className="">
+      <header className="">
       <Navbar />
       <Route exact path="/" component={Code} />
       <Route exact path="/php" component={Php} />

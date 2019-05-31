@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import FlipperCard from './FlipperCard'
 import FlipperCard2 from './FlipperCard2'
 
+
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -64,6 +65,8 @@ export default class All2 extends Component {
         </div>
       </CarouselProvider>
       </div>
+   
+
       </div>
     )
   }

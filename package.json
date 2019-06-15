@@ -23,8 +23,8 @@
     "start": "node server.js",
     "client-install": "npm install --prefix name",
     "client": "npm start --prefix name",
-    "predeploy": "npm run build --prefix name",
-    "deploy": "gh-pages -d build --prefix name",
+    "predeploy": "NPM_CONFIG_PRODUCTION=false npm install --prefix name && npm run build --prefix name",
+    "deploy": "concurrently \"npm run server\" \"gh-pages -d build --prefix name\"",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix name && npm run build --prefix name"
   },

@@ -4,7 +4,7 @@
 
 1. Fork the repository
 2. Clone it
-3. _See the issues tab in github_ and try to add a new feature or improve design.
+3. See the **issues tab in github** and try to add a new feature or improve design.
 4. Make sure everything is working. Test your code.
 5. Once you're sure everything works fine. You cann send a pull request.
 

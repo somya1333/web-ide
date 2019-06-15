@@ -3,10 +3,8 @@ const router = express.Router();
 const request = require("request");
 
 // For PHP
-router.get("/a", function(req, res) {
-  res.render("a");
-});
-router.post("/a", function(req, res) {
+
+router.post("/php", function(req, res) {
   let code = req.body.script;
   var program = {
     script: code,
@@ -32,10 +30,8 @@ router.post("/a", function(req, res) {
 });
 
 //For python
-router.get("/p", function(req, res) {
-  res.render("p");
-});
-router.post("/p", function(req, res) {
+
+router.post("/python", function(req, res) {
   let code = req.body.script;
 
   var program = {

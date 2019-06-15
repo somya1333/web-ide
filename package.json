@@ -2,7 +2,6 @@
   "name": "ide-react",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://anant016.github.io/web-ide/",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.19.0",

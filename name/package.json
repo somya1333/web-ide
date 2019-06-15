@@ -2,7 +2,6 @@
   "name": "name",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://anant016.github.io/web-ide/",
   "dependencies": {
     "antd": "^3.19.2",
     "axios": "^0.18.0",

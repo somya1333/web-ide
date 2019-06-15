@@ -2,6 +2,7 @@
   "name": "ide-react",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://anant016.github.io/web-ide/",
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -17,13 +18,15 @@
     "request": "^2.88.0",
     "three": "^0.104.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "scripts": {
     "server": "nodemon server.js",
     "start": "node server.js",
     "client-install": "npm install --prefix name",
     "client": "npm start --prefix name",
-    "predeploy": "NPM_CONFIG_PRODUCTION=false npm install --prefix name && npm run build --prefix name",
+    "predeploy": "npm install --prefix name && npm run build --prefix name",
     "deploy": "concurrently \"npm run server\" \"npm run client\" \"gh-pages -d build --prefix name\"",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix name && npm run build --prefix name"

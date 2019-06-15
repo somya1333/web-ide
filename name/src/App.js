@@ -11,6 +11,7 @@ import Navbar from './components/Navbar'
 import Php from './components/Php'
 import All from './components/animate/All';
 import All2 from './components/animate/All2'
+import Enrollment from './components/Enrollment';
 
 
 
@@ -20,12 +21,13 @@ function App() {
       <Router>
     <div className="">
       <header className="">
-      <Navbar />
+     
       <Route exact path="/" component={Code} />
       <Route exact path="/php" component={Php} />
       <Route exact path="/python" component={Code} />
       <Route exact path="/a" component={All}/>
       <Route exact path="/b" component={All2}/>
+      <Route exact path="/enrollment" component={Enrollment}/>
       
       </header>
     </div>

@@ -6,7 +6,7 @@ import axios from 'axios'
 import AceEditor from 'react-ace';
 import 'brace/mode/python';
 import 'brace/theme/github';
-
+import Navbar from './Navbar'
 import windowSize from 'react-window-size';
 
 const request=require('request')
@@ -59,7 +59,9 @@ class Code extends Component {
   render() {
  
     return (
+     
       <div className="ml-3  mr-5">  
+       <Navbar />
       <div className="row">
         <div className="">
         <div>

@@ -7,6 +7,7 @@ import axios from 'axios'
 import AceEditor from 'react-ace';
 import 'brace/mode/php';
 import 'brace/theme/github';
+import Navbar from './Navbar';
 
 
 const request=require('request')
@@ -55,6 +56,7 @@ class Php extends Component {
  
     return (
       <div className="ml-3 mt-5">  
+      <Navbar/>
       <div className="row">
         <div className="col-6">
         <AceEditor

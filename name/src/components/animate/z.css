@@ -3,7 +3,7 @@
     width: 15rem;
     height: 5rem;
     cursor: pointer;
-    background-image: linear-gradient(45deg, rgb(197, 235, 136), rgb(97, 71, 182));
+   
   }
   .square2 {
     position: absolute;
@@ -11,7 +11,7 @@
      height: 5rem;
      cursor: pointer;
      left:30rem;
-     background-image: linear-gradient(45deg, rgb(197, 235, 136), rgb(97, 71, 182));
+     background-image: linear-gradient(to right, #114357, #f29492);
    }
 
   .full-screen-square {
@@ -22,7 +22,8 @@
     top: 50px;
     left:100px;
     z-index: 1;
-    background-image: linear-gradient(45deg, rgb(113, 234, 182), rgb(97, 71, 182))}
+   
+  }
 
 
     .full-screen-square2 {

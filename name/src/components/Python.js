@@ -55,8 +55,9 @@ class Python extends Component {
 
   render() {
     return (
-      <div className="ml-3  mr-5">
+      <div className="ml-0  mr-0">
         <Navbar />
+      <div className="ml-3  mr-5">
         <div className="row">
           <div className="">
             <div>
@@ -106,6 +107,7 @@ class Python extends Component {
             <br />
           </div>
         </div>
+      </div>
       </div>
     );
   }

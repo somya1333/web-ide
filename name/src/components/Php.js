@@ -52,8 +52,9 @@ class Php extends Component {
 
   render() {
     return (
-      <div className="ml-3 mt-5">
-        <Navbar />
+      <div className="ml-0 mr-0">
+       <Navbar />
+      <div className="ml-3 mr-3">
         <div className="row">
           <div className="col-6">
             <AceEditor
@@ -98,6 +99,7 @@ class Php extends Component {
             <br />
           </div>
         </div>
+      </div>
       </div>
     );
   }
